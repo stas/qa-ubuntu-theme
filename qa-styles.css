@@ -1,0 +1,339 @@
+/*
+Theme Name: Ubuntu Romanian Loco Light Q2A Theme
+Description: A theme for Ubuntu Loco Q2A
+Version: 0.1
+Author: Stas Sușcov
+Author URI: http://stas.nerd.ro/
+
+This work, like Q2A, is released under GNU General Public License, version 2 (GPL). 
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html 
+.
+Colors: http://www.colourlovers.com/palette/1140455/Ubuntu_Lucid_Lynx
+.
+*/
+
+/* Reset browser defaults */ 
+@import url('reset.css');
+
+/* Reset browser defaults */ 
+@import url('typography.css');
+
+/* Import Ubuntu Web Font */
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:regular,bold,italic');
+
+/*
+Layout
+*/
+body { background: transparent url("img/dotted-bg.png") top; }
+.qa-header,
+.qa-sub-header,
+.qa-content { width: 980px;  margin: 0 auto; overflow: hidden; border-left: 1px solid #CCC; border-right: 1px solid #CCC; }
+.qa-header { height: 62px; overflow: hidden; background: #DD4814 url("img/header-bg.png") repeat-x; border-bottom: 1px solid #CCC;}
+.qa-logo a { float: right; background: transparent url("img/ubuntu-logo.png") no-repeat 0 10px; width: 118px; height: 62px; margin-right: 10px; padding-top: 40px; }
+.qa-nav-main-list { margin: 0; list-style: none;  }
+.qa-nav-main-list li { margin: 0; padding: 0; height: 62px; border-right: 1px solid #DD4814; float: left; margin: 0; padding: 0 10px; }
+.qa-nav-main-list li:hover { background: transparent url("img/header-bg-hover.png") repeat-x top; }
+.qa-nav-main-list li a { display: block; line-height: 62px; }
+.qa-sub-header { background: #FFF; padding-bottom: 5px; }
+.qa-sub-header-content { margin: 0 20px; background-color: #F7F7F7; padding: 0 10px 0; height: 30px; overflow: hidden; }
+.qa-nav-user-list, 
+.qa-logged-in, 
+.qa-nav-user-list li { float: left; list-style: none; }
+..qa-nav-user-list { height: 30px; overflow: hidden; }
+.qa-logged-in { margin-right: 10px; line-height: 30px; }
+.qa-header ul,
+.qa-sub-header ul { padding-left: 0; }
+.qa-nav-user-list li { padding: 0 10px 0 0; line-height: 30px; }
+.qa-search { float: right; line-height: 30px; }
+.qa-content { width: 940px; background: #FFF; padding: 20px; min-height: 600px; }
+.qa-sidepanel { width: 250px; float: right; background-color: #F7F7F7; padding: 15px 10px; }
+.qa-main { width: 650px; }
+.qa-form-tall-table,
+.qa-form-tall-table tr { border: none; padding: 0; }
+.qa-form-tall-table { background-color: #F7F7F7; width: 99%; border-collapse: separate; border-spacing: 5px 0; }
+.qa-form-tall-table td { border-bottom: 1px solid #EDEDED; border-top: 1px solid #FFF; border-left: 5px solid transparent; padding: 5px 0; }
+.qa-form-tall-table input[type="text"],
+#password { width: 95%; font-size: 170%; padding: 2px 5px; }
+.qa-form-tall-table textarea { width: 95%; padding: 2px 5px; max-width: 605px; }
+.qa-form-tall-table > td { border-top: none; }
+.qa-form-tall-table td.qa-form-tall-buttons { border-bottom: none; }
+.qa-q-list-item { background-color: #F7F7F7; margin-bottom: 20px; padding: 15px 10px; clear: left; }
+.qa-q-item-stats { float: left; padding: 5px; margin-right: 10px; background: #F7F7F7; }
+.qa-vote-buttons { width: 50px; float: left; text-align: center; padding-bottom: 5px; }
+.qa-vote-count { margin-left: 50px; }
+.qa-vote-first-button { border: none; background: transparent url("img/actions/arrow_up.png") no-repeat; width: 24px; height: 30px; cursor: pointer; }
+.qa-vote-second-button { border: none; background: transparent url("img/actions/arrow_down.png") no-repeat 0 5px; width: 24px; height: 30px; cursor: pointer; }
+.qa-voted-down-button,
+.qa-voted-down-hover,
+.qa-voted-up-button,
+.qa-voted-up-hover,
+.qa-vote-one-button.qa-vote-up-disabled,
+.qa-vote-one-button.qa-vote-down-disabled { border: none; background: transparent url("img/actions/cancel.png") no-repeat 0 5px; width: 24px; height: 30px; cursor: pointer; margin-top: 12px; }
+.qa-netvote-count-data { display: block; height: 29px; line-height: 29px; }
+.qa-netvote-count-data,
+.qa-vote-first-button,
+.qa-voting,
+.qa-q-item-title,
+.qa-q-view > h1,
+.qa-q-view-main h2,
+.qa-q-view-content,
+.qa-a-item-content { border-bottom: 1px solid #EDEDED; }
+.qa-netvote-count-pad,
+.qa-vote-second-button,
+.qa-a-count,
+.qa-q-item-meta,
+.qa-q-view-main,
+.qa-q-view-meta,
+.qa-a-item-meta { border-top: 1px solid #FFF; }
+.qa-vote-clear,
+.qa-q-item-clear { clear: left; }
+.qa-a-count { line-height: 14px; padding-top: 5px; padding-right: 10px; background: transparent url("img/actions/comment.png") no-repeat 5px right; }
+.qa-suggest-next { float: right; }
+.qa-q-item-title,
+.qa-q-item-meta { display: block; }
+.qa-q-item-tag-list,
+.qa-q-view-tag-list { list-style: none; margin: 0; }
+.qa-q-item-tag-list li,
+.qa-q-view-tag-list li { float: right; margin-left: 10px; padding-left: 10px; background: transparent url("img/actions/tag.png") no-repeat 0 6px; }
+.qa-footer { padding: 20px 0; width: 100%; background: #EEECEA url("img/footer-bg.png") repeat-x; }
+.qa-nav-footer,
+.qa-attribution,
+.qa-custom-footer { width: 980px; margin: 0 auto; }
+.qa-custom-footer ul { list-style: none; padding-left: 0; }
+.qa-custom-footer .aside { width: 15%; float: left; margin-right: 15px; }
+.qa-custom-footer .blogroll a { display: block; margin-bottom: 2px; }
+.qa-attribution { clear: both; }
+.qa-custom-footer .first-aside { margin-left: 20px; }
+.qa-q-view .qa-voting,
+.qa-a-list-item .qa-voting { float: right; border-bottom: none; background: #F7F7F7; }
+.qa-q-view,
+.qa-a-list-item,
+.qa-top-tags-table,
+.qa-top-users-table,
+.qa-template-user .qa-form-wide-table,
+.qa-template-account .qa-form-wide-table,
+.qa-template-admin table { background: #F7F7F7; padding: 15px 10px; overflow: hidden; margin-bottom: 10px; }
+.qa-q-view > h1 { margin-bottom: 0; line-height: 29px; }
+#errorbox { text-align: center; margin: 0 auto 10px; display: block; width: 50%; }
+.qa-q-view img { max-width: 630px; }
+.qa-q-view-avatar { float: left; margin: 5px 5px 0 0; }
+.qa-q-view-avatar img,
+.qa-a-item-avatar img { width: 40px; height: 40px; }
+.qa-q-view-tag-item { margin-top: 5px; }
+.qa-q-view-buttons { clear: both; text-align: right; padding: 5px 0; }
+.qa-q-view-main h2 { clear: left; margin-bottom: 0; margin-top: 10px; }
+.qa-q-view-c-list,
+.qa-a-item-c-list { padding: 5px; border-top: 1px dotted #CACACA; clear: both; margin-top: 10px; }
+.qa-c-list-item { padding: 5px 0 5px; border-bottom: 1px solid #EAEAEA; }
+.qa-c-item-buttons { display: inline; }
+.qa-c-item-footer { display: inline; }
+.qa-c-item-avatar { float: left; margin-right: 5px; }
+.qa-a-item-content { padding-bottom: 10px; }
+.qa-a-item-meta { padding-top: 5px; display: block; }
+.qa-a-item-avatar { margin-top: 5px; float: right; margin-left: 5px; }
+.qa-a-selection { float: right; clear: right; }
+.qa-a-selected { display: none; }
+.qa-a-selection input { width: 24px; height: 24px; cursor: pointer; border: none; background: transparent url("img/actions/heart.png") no-repeat top; overflow: hidden; float: right; }
+.qa-a-selected-text { width: 24px; height: 24px; background: transparent url("img/actions/pin.png") no-repeat top; overflow: hidden; text-indent: -9999px; }
+.qa-a-item-buttons { clear: both; margin-top: 5px; }
+.qa-q-view-meta { display: block; padding-top: 5px; }
+.qa-q-view-follows { text-align: right; }
+.qa-top-tags-table,
+.qa-top-users-table,
+.qa-template-user .qa-form-wide-table,
+.qa-template-account .qa-form-wide-table,
+.qa-template-admin table { border-collapse: collapse; }
+.qa-top-tags-table,
+.qa-top-users-table,
+.qa-template-user .qa-form-wide-table,
+.qa-template-account .qa-form-wide-table,
+.qa-template-admin table,
+.qa-top-tags-table tr,
+.qa-top-users-table tr,
+.qa-template-user .qa-form-wide-table tr,
+.qa-template-account .qa-form-wide-table tr,
+.qa-template-admin table tr { border: none; }
+.qa-top-tags-table tr,
+.qa-top-users-table tr,
+.qa-template-user .qa-form-wide-table tr,
+.qa-template-account .qa-form-wide-table tr,
+.qa-template-admin table tr { border-top:1px solid #EAEAEA; border-bottom: none; }
+.qa-top-tags-label,
+.qa-top-users-label { display: table-cell !important; -webkit-border-radius: 0 !important; -moz-border-radius: 0 !important; border-radius: 0 !important; }
+.qa-top-users-table { border-spacing: 0 10px; }
+.qa-top-tags-spacer,
+.qa-top-users-spacer,
+.qa-page-links-label { display: none; }
+.qa-top-tags-count:first-child,
+.qa-top-users-score:first-child { border-left: none; }
+.qa-top-tags-table tr:first-child,
+.qa-top-tags-table tr:first-child td,
+.qa-top-users-table tr:first-child,
+.qa-template-user .qa-form-wide-table tr:first-child,
+.qa-template-account .qa-form-wide-table tr:first-child,
+.qa-template-admin table tr:first-child { border-top: none; }
+.qa-top-tags-label:last-child,
+.qa-top-users-label,
+.qa-top-tags-label { border-bottom: none !important; }
+.qa-page-links-list { margin:0; padding:0; list-style:none; display:inline; }
+.qa-page-links-item { display:inline; margin: 0 !important; }
+.qa-sidepanel h3 { border-bottom: 1px dotted #DD4814; padding-bottom: 5px; }
+
+.entry-content embed { width: 100%; }
+
+/* Admin stuff */
+.qa-nav-sub-list { position: fixed; top: 95px; padding-left: 20px; }
+.qa-nav-sub-list li { display: inline; list-style-type: circle; padding-right: 5px; }
+
+code, pre { padding: 5px;  margin: 5px 0; overflow: auto; }
+code ol, pre ol { margin: 0; padding: 0; }
+
+
+/*
+Typography
+*/
+body { font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif; }
+body { color: #333; font-size: 80%; line-height: 1.5; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; color: #772953; }
+h1 { font-size: 180%; margin-bottom: 10px; }
+h2 { font-size: 160%; margin-bottom: 10px; font-weight: bold; }
+h3 { font-size: 140%; margin-bottom: 10px; }
+h4 { font-size: 120%; margin-bottom: 10px; }
+h5 { font-size: 110%; font-weight: bold; margin-bottom: 10px; }
+h6 { font-size: 110%; font-weight: bold; }
+code, pre { font-family: "Lucida Console", consolas, courier, monospace; background: #444; color: #FFF; font-size: 90%; }
+a, a:active { color: #772953; }
+a:hover { color: #DD4814; }
+a:visited { color: #777777; }
+.qa-nav-main-list li a { color: #FFF; text-decoration: none; font-size: 110%; }
+.qa-logo a { font-size: 11px; color: #FFF; text-decoration: none; }
+.qa-vote-buttons input { text-indent: 9999px; }
+.qa-vote-count { text-align: center; text-transform: uppercase; }
+.qa-netvote-count-data { font-weight: bolder; font-size: 120%; }
+.qa-a-count { text-align: center; display: block; text-transform: uppercase; }
+.qa-q-item-title a { font-size: 170%; text-decoration: none; color: #DD4814; line-height: 34px; }
+.qa-q-item-meta,
+.qa-a-item-meta { font-style: italic; text-align: right; }
+.qa-q-item-tag-list li a,
+.qa-q-view-tag-list li a,
+.qa-q-view-main input[type="submit"] { text-transform: uppercase; text-decoration: none; }
+.qa-footer { font-size: 80%; }
+.qa-attribution,
+.qa-q-view-follows { color: #999; text-align: right; font-style: italic; }
+.qa-custom-footer .blogroll a { text-decoration: none; color: #444; border-bottom: 1px dotted #444; }
+.qa-custom-footer h3 { margin-bottom: 5px; font-size: 120%; }
+.qa-custom-footer a { color: #444; }
+.qa-custom-footer a:hover { color: #DD4814; }
+.qa-main h2 { font-size: 140%; font-weight: normal; }
+.qa-q-view-content h1,
+.qa-q-view-content h2,
+.qa-q-view-content h3 { font-size: 120%; }
+.qa-q-view-meta,
+.qa-a-item-meta { font-style: italic; font-size: 90%;  }
+.qa-q-view-who-points,
+.qa-a-item-who-points { color: #772953; font-weight: bolder;}
+.qa-q-view .entry-title { text-decoration: none; color: #DD4814; }
+.qa-c-item-meta { font-style: italic; color: #999; }
+.qa-c-item-meta a:link { color: #999; }
+.qa-c-item-buttons,
+.qa-a-item-buttons { text-align: right; }
+.qa-top-tags-count,
+.qa-top-users-score,
+.qa-template-user .qa-form-wide-table .qa-form-wide-label,
+.qa-template-account .qa-form-wide-table .qa-form-wide-label,
+.qa-template-admin table .qa-form-wide-label,
+.qa-form-wide-ok { color:#772953; text-align:right; font-weight: bolder; }
+.qa-page-links { text-align: center; }
+.qa-sidepanel h3 { font-size: 120%; color: #DD4814; }
+
+/*
+Ubuntu Font
+*/
+.qa-header,
+.qa-sub-header,
+.awesome,
+h1,
+h2,
+h3,
+h4,
+h5,
+input[type="submit"],
+input[type="text"],
+label,
+.qa-vote-count,
+.qa-a-count,
+.qa-q-item-title a,
+.qa-top-tags-count,
+.qa-top-users-score,
+.qa-template-user .qa-form-wide-table .qa-form-wide-label,
+.qa-template-account .qa-form-wide-table .qa-form-wide-label { font-family: 'Ubuntu'; }
+
+
+/*
+Additional Styles
+*/
+blockquote { color:#666; font-style:italic; }
+table { border:1px solid #ccc; border-width:1px 1px 0 1px; font-size:13px; text-align:left; }
+caption { text-align:left; }
+tr { border-bottom:1px solid #ccc; }
+th, td { padding: 5px; }
+hr { background-color:#ccc; border:0; color:#CCC; height:1px; margin-bottom:22px; }
+p { margin-bottom: 10px; }
+.clearall { clear: both; height: 1px; }
+.qa-search-field,
+input[type="text"],
+input[type="password"],
+textarea { border: 2px solid #CCC; border-right: 1px solid #DDD; border-bottom: 1px solid #DDD; padding: 1px 3px; }
+
+/*
+CSS3
+*/
+.qa-nav-main-list li a { text-shadow: #333 1px 1px 1px; }
+.qa-sub-header-content,
+.qa-sidepanel,
+.qa-template-ask .qa-form-tall-table,
+.qa-q-list-item,
+.qa-q-view,
+.qa-a-list-item,
+.qa-top-tags-table,
+.qa-top-users-table,
+.qa-template-user .qa-form-wide-table,
+.qa-template-account .qa-form-wide-table,
+.qa-template-admin table { -webkit-box-shadow: 0px 1px 1px #CCC; -moz-box-shadow:0 1px 1px #CCC; }
+
+/*
+Fancyness
+    Buttons from http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba
+*/
+.awesome,
+.awesome:visited {
+    background-color: #222; 
+    display: inline-block; 
+    padding: 5px; 
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 5px;
+}
+
+.awesome:hover { background-color: #111; color: #fff; text-decoration: none; background-color: #d45500; }
+.awesome:active { top: 1px; }
+.awesome a {  color: #FFF; }
+.awesome,
+.awesome:visited { color: #fff; background-color: #ff5c00; }
+
+/* Wysiwyg */
+div.wysiwyg ul.panel { padding-bottom: 4px !important; }
+div.wysiwyg ul.panel li { border: none !important; }
+div.wysiwyg ul.panel li.wysiwyg-button-hover { border: none !important; }
+
+/* Prettify */
+ol.linenums li { list-style: decimal; list-style-position: inside; }
